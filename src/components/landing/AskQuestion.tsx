@@ -5,6 +5,7 @@ import {
   PiXLogoBold,
 } from "react-icons/pi";
 import Button from "../common/Button";
+import { Link } from "react-router";
 
 export default function AskQuestion() {
   return (
@@ -22,7 +23,9 @@ export default function AskQuestion() {
         <p className="text-2xl text-grayscale-50 font-light">
           Don't feel shy ask right away!
         </p>
-        <Button classes="p-4 px-12 text-xl mt-8">CONTACT ME!</Button>
+        <Link to="/contact">
+          <Button classes="p-4 px-12 text-xl mt-8">CONTACT ME!</Button>
+        </Link>
 
         <div className="p-2 border-2 border-primary-500 border-dashed mt-16 rounded-2xl">
           <div className="bg-linear-to-t from-secondary-800/90 to-secondary-900/60 pt-12 pb-6 relative rounded-2xl shadow-lg px-2">
@@ -78,12 +81,12 @@ export default function AskQuestion() {
                         </a>
                       </li>
                       <li>
-                        <a
-                          href=""
+                        <Link
+                          to="contact"
                           className="cursor-pointer text-primary-50/80 hover:text-primary-400 transition-colors"
                         >
                           Contact Us
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -120,8 +123,8 @@ export default function AskQuestion() {
 
               <hr className="text-primary-500/50 mb-6 mt-12" />
 
-              <p className="text-grayscale-50 flex gap-2 text-lg mx-auto justify-center">
-                <span className="text-primary-400 flex items-center gap-1">
+              <p className="text-grayscale-50 flex flex-col sm:flex-row gap-2 text-lg mx-auto items-center justify-center">
+                <span className="text-primary-400 flex items-center gap-1 w-fit">
                   <PiCopyrightBold /> Honey Bee Happy
                 </span>
                 All Rights Reserved 2025.

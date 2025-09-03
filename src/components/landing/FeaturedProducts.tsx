@@ -19,9 +19,9 @@ export default function FeaturedProducts() {
   });
   return (
     <div className="bg-linear-to-b from-secondary-50 to-secondary-50 via-secondary-200/60">
-      <div className="default-margin flex gap-6 flex-wrap">
+      <div className="default-margin flex gap-2 flex-wrap">
         <div className="text-center w-full mb-4 md:mb-6">
-          <h2 className="text-4xl md:text-5xl font-semibold text-primary-500">
+          <h2 className="text-4xl md:text-5xl font-semibold mb-6 sm:mb-8 text-primary-500">
             Featured Products
           </h2>
         </div>
@@ -45,7 +45,7 @@ export default function FeaturedProducts() {
           {isFetched ? (
             data.data!.length > 0 &&
             data.data!.map((prod: Product) => (
-              <SwiperSlide key={prod._id + "featured"} className="pb-8">
+              <SwiperSlide key={prod._id + "featured"} className="pb-0 sm:pb-8">
                 <ProductCard
                   key={prod._id}
                   product={{
@@ -68,10 +68,14 @@ export default function FeaturedProducts() {
           )}
         </Swiper>
 
-        <div className="mx-auto flex items-center mt-2 mb-6 gap-8 bg-primary-50/50 p-6 px-8 text-grayscale-600 rounded-xl shadow-lg">
-          <h3 className="text-2xl">We've got more products for you to see!</h3>
+        <div className="mx-auto flex flex-col sm:flex-row items-center mt-2 mb-6 gap-8 bg-primary-50/50 p-6 px-8 text-grayscale-600 rounded-xl shadow-lg">
+          <h3 className="text-xl sm:text-2xl">
+            We've got more products for you to see!
+          </h3>
           <Link to="/products">
-            <Button classes="px-8 py-3 text-lg">Check our catalog</Button>
+            <Button classes="px-8 py-3 text-base sm:text-lg">
+              Check our catalog
+            </Button>
           </Link>
         </div>
       </div>

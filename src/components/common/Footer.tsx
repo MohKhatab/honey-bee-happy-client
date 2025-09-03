@@ -90,12 +90,12 @@ export default function Footer() {
 
         <hr className="text-primary-500/50 mb-6 mt-12" />
 
-        <p className="text-grayscale-50 flex gap-2 text-lg mx-auto justify-center">
-          <span className="text-primary-400 flex items-center gap-1">
+        <div className="text-grayscale-50 flex flex-col gap-2 text-lg mx-auto justify-center">
+          <p className=" flex items-center gap-1">
             <PiCopyrightBold /> Honey Bee Happy
-          </span>
-          All Rights Reserved 2025.
-        </p>
+          </p>
+          <p>All Rights Reserved 2025.</p>
+        </div>
       </div>
     </div>
   );
