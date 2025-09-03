@@ -3,6 +3,7 @@ import I18nextBrowserLanguageDetector from "i18next-browser-languagedetector";
 import I18NextHttpBackend from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
 import { hideLoader, showLoader } from "../components/loading/LoaderFunctions";
+import { backendURL } from "../config";
 
 i18next
   .use(I18NextHttpBackend)
@@ -16,7 +17,7 @@ i18next
     },
 
     backend: {
-      loadPath: "http://localhost:8200/api/translations/{{ns}}/{{lng}}",
+      loadPath: `${backendURL}/translations/{{ns}}/{{lng}}`,
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       parse: function (data: any) {
