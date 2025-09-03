@@ -152,7 +152,7 @@ export default function Contact() {
             registration={register("message")}
             error={errors.message}
           />
-          <div className="flex gap-6 items-center">
+          <div className="flex flex-col sm:flex-row gap-6 items-center">
             <div>
               <Turnstile
                 ref={turnstileRef}
@@ -172,7 +172,7 @@ export default function Contact() {
               disabled={false}
               loading={isLoading}
               type="submit"
-              classes="text-lg w-fit px-8 py-4 ml-auto shrink-0"
+              classes="text-lg w-full sm:w-fit px-8 py-4 ml-auto shrink-0"
             >
               Send Message
             </Button>
